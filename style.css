@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --fm-sora: "Sora", sans-serif;
+  --fm-roboto: "Roboto Mono", monospace;
+  --fm-roboto-flex: "Roboto Flex", sans-serif;
+}
+html {
+  width: 100vw;
+}
+body {
+  background-color: #020202;
+  font-family: var(--fm-sora);
+  color: white;
+}
+
+@media (width < 26.9375rem) {
+  .container {
+    padding: 0 2.8125rem;
+  }
+  header {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 2.75rem;
+    margin-bottom: 2.75rem;
+  }
+  #hero {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  #hero p {
+    font-family: var(--fm-roboto-flex);
+    font-weight: 600;
+    line-height: 150%;
+    color: #d9d9d9;
+  }
+  #hero h1 {
+    font-family: var(--fm-roboto-flex);
+    font-weight: 900;
+    line-height: 150%;
+    font-size: 2.5rem;
+    margin-bottom: 2.625rem;
+  }
+
+  #content h3 {
+    margin-bottom: 16px;
+  }
+  #content p {
+    color: #d9d9d9;
+    margin-bottom: 2.5rem;
+  }
+
+  #inputs-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  label {
+    font-weight: 700;
+    color: #d9d9d9;
+  }
+
+  input {
+    width: 5.375rem;
+    height: 5.5rem;
+    background-color: #0f0e0f;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+    color: #ffffff;
+  }
+
+  .input input:hover {
+    /* 1. Torna a borda transparente para o fundo aparecer */
+    border: 2px solid transparent;
+
+    /* 2. Aplica o seu gradiente */
+    background-image: linear-gradient(#242224, #242224),
+      /* Fundo branco interno */
+        linear-gradient(
+          90deg,
+          #77c0af 0%,
+          #d1dc97 14.84%,
+          #e9a9b3 32.15%,
+          #d586e0 65.79%,
+          #91a1fa 84.58%
+        );
+
+    /* 3. Configura o corte do fundo */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .input input:focus .input {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
