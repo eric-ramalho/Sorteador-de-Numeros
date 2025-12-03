@@ -15,6 +15,13 @@ body {
   background-color: #020202;
   font-family: var(--fm-sora);
   color: white;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    /* Camada 1: Gradiente */ url("assets/Shapes.png"); /* Camada 2: Imagem */
+  background-repeat: no-repeat;
 }
 
 @media (width < 26.9375rem) {
@@ -60,6 +67,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    text-align: center;
   }
   label {
     font-weight: 700;
@@ -74,13 +82,13 @@ body {
     border-radius: 10px;
     margin-top: 1rem;
     color: #ffffff;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .input input:hover {
-    /* 1. Torna a borda transparente para o fundo aparecer */
-    border: 2px solid transparent;
-
-    /* 2. Aplica o seu gradiente */
+    border: 3px solid transparent;
     background-image: linear-gradient(#242224, #242224),
       /* Fundo branco interno */
         linear-gradient(
@@ -91,14 +99,23 @@ body {
           #d586e0 65.79%,
           #91a1fa 84.58%
         );
-
-    /* 3. Configura o corte do fundo */
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
-  .input input:focus .input {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  .input input:focus {
+    border: 3px solid transparent;
+    outline: none;
+    background-image: linear-gradient(#242224, #242224),
+      /* Fundo branco interno */
+        linear-gradient(
+          90deg,
+          #77c0af 0%,
+          #d1dc97 14.84%,
+          #e9a9b3 32.15%,
+          #d586e0 65.79%,
+          #91a1fa 84.58%
+        );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
   }
 }
