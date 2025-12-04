@@ -77,14 +77,14 @@ body {
   #number,
   #range,
   #range-end {
-    width: 5.375rem;
+    width: 6rem;
     height: 5.5rem;
     background-color: #0f0e0f;
     border: none;
     border-radius: 0.625rem;
     margin-top: 1rem;
     color: #ffffff;
-    padding: 16px;
+    padding: 5px;
     font-size: 32px;
     text-align: center;
   }
