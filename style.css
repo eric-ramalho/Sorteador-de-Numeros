@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (width < 26.9375rem) {
+@media (width < 27.9375rem) {
   .container {
     padding: 0 2.8125rem;
   }
